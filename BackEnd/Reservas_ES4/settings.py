@@ -152,7 +152,7 @@ DATABASES ={
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'django_reservas',
         'USER': 'root',
-        'PASSWORD': 'Darklinkoscuroofward45@',
+        'PASSWORD': '',
         'HOST':'localhost',
         'PORT':3306
 
