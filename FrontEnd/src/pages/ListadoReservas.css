@@ -1,0 +1,283 @@
+/* Estilos para el listado de reservas */
+.listado-reservas {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.reservas-header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 25px 0;
+  margin-bottom: 30px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.back-button {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.back-button:hover {
+  color: #3498db;
+}
+
+.header-title h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.subtitle {
+  margin: 5px 0 0 0;
+  color: #bdc3c7;
+  font-size: 14px;
+}
+
+.btn-nueva-reserva {
+  background-color: #bfccd4;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.btn-nueva-reserva:hover {
+  background-color: #bfccd4;
+  color: rgb(0, 0, 0);
+}
+
+/* Tabla de reservas */
+.reservas-table-container {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  overflow-x: auto;
+  margin-bottom: 30px;
+}
+
+.reservas-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.reservas-table th {
+  background-color: #34495e;
+  color: white;
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid #2c3e50;
+}
+
+.reservas-table td {
+  padding: 15px;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.reservas-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.nombre-columna {
+  min-width: 200px;
+}
+
+.observacion {
+  display: block;
+  font-size: 12px;
+  color: #7f8c8d;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+/* Estado badges */
+.estado-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.acciones-columna {
+  display: flex;
+  gap: 10px;
+  min-width: 200px;
+}
+
+.btn-actualizar, .btn-eliminar {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.btn-actualizar {
+  background-color: #064e77;
+  color: white;
+}
+
+.btn-actualizar:hover {
+  background-color: #064e77;
+}
+
+.btn-eliminar {
+  background-color: #a5291b;
+  color: white;
+}
+
+.btn-eliminar:hover {
+  background-color: #a5291b;
+}
+
+.loading-container {
+  text-align: center;
+  padding: 50px;
+}
+
+.spinner {
+  border: 4px solid rgba(0,0,0,0.1);
+  border-radius: 50%;
+  border-top: 4px solid #3498db;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.empty-state {
+  text-align: center;
+  padding: 50px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.btn-primario {
+  display: inline-block;
+  background-color: #3498db;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 20px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.btn-primario:hover {
+  background-color: #2980b9;
+  color: white;
+}
+
+/* Resumen de estados */
+.resumen-estados {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-top: 20px;
+}
+
+.resumen-estados h3 {
+  margin-top: 0;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.estados-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.estado-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.estado-item .estado-badge {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+/* Mensajes de error */
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-reintentar {
+  background-color: #721c24;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-reintentar:hover {
+  background-color: #5a151c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .acciones-columna {
+    flex-direction: column;
+  }
+  
+  .reservas-table th,
+  .reservas-table td {
+    padding: 10px 5px;
+    font-size: 14px;
+  }
+  
+  .estados-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
